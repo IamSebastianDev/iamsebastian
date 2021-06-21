@@ -686,7 +686,7 @@ h1 .tagline-component:nth-child(4) {
 
 .about-quote-sign {
 	font-size: 1.4em;
-	color: var(--color-ui-dark-shaded);
+	color: var(--color-ui-accent-shaded);
 }
 /* Footer */
 
