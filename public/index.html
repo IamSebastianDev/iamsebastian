@@ -1,0 +1,322 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Sebastian Heinz" />
+		<title>I Am Sebastian | A Freelance Webdeveloper</title>
+		<link rel="stylesheet" href="./styles/style.css" />
+		<link rel="stylesheet" href="./styles/resets.css" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Nunito:wght@600;800&display=swap"
+			rel="stylesheet"
+		/>
+
+		<script src="./scripts/pangolicons.latest.min.mjs"></script>
+	</head>
+	<body>
+		<div class="cookie" cookie-visible="false">
+			<p>
+				Hey! This site uses Javascript, the
+				<a
+					href="https://en.wikipedia.org/wiki/Web_storage"
+					rel="norefferer nofollow"
+					>Local Storage of your Browser</a
+				>
+				as well as Cookies to work correctly. You can read more about
+				that in the
+				<a href="./privacy.html">Privacy Policy</a>.
+			</p>
+			<button id="cookie-confirm">Got it!</button>
+		</div>
+		<nav>
+			<ul>
+				<li class="nav-item">
+					<a href="#contact" class="nav-link nav-link-action"
+						>Get in touch.</a
+					>
+				</li>
+				<li class="nav-item">
+					<a href="#about" class="nav-link">About Me</a>
+				</li>
+				<li class="nav-item">
+					<a href="#portfolio" class="nav-link">Portfolio</a>
+				</li>
+
+				<li class="nav-item">
+					<a
+						href="https://github.com/IamSebastianDev"
+						target="_blank"
+						rel="norefferer nofollow"
+						class="nav-link"
+					>
+						<i pangolicons="github"></i>
+					</a>
+				</li>
+			</ul>
+			<button class="nav-burger">
+				<i pangolicons="alignJustifiy"></i>
+			</button>
+		</nav>
+		<main>
+			<section id="tagline">
+				<h1>
+					<span class="tagline-component">Hi!</span>
+					<span class="tagline-component">I</span>
+					<span class="tagline-component">am</span>
+					<span class="tagline-component">Sebastian</span>
+				</h1>
+				<h3>
+					<span class="tagline-component tagline-subheading"
+						>A freelance Webdeveloper from Munich.</span
+					>
+				</h3>
+				<div class="scroll-hint">
+					<span>Scroll down to find out more</span>
+					<i pangolicons="chevronDown"></i>
+				</div>
+			</section>
+			<section id="contact">
+				<h3 id="contact-header">Get in touch!</h3>
+				<form class="contact-form" id="mailer">
+					<div class="form-group">
+						<label for="email">Your Emailadress:</label>
+						<input
+							type="email"
+							name="email"
+							id="email"
+							placeholder="Your Emailadress"
+						/>
+						<span class="contact-validation" state="false"></span>
+					</div>
+					<div class="form-group">
+						<label for="message">Your Message:</label>
+						<textarea
+							name="message"
+							id="message"
+							placeholder="Your Message"
+						></textarea>
+						<span class="contact-validation" state="false"></span>
+					</div>
+					<button id="contact-submit">
+						Submit
+						<span id="contact-submit-spinner" state="false"></span>
+					</button>
+				</form>
+				<p>
+					If you're not quite sure what I can do for you, take a look
+					at some of my
+					<a href="#portfolio">previous work</a> below.
+				</p>
+			</section>
+			<section id="about">
+				<h3>About me:</h3>
+				<div class="about-container">
+					<div class="about-image">
+						<img
+							src="./assets/image/headshot.jpg"
+							alt="That's me, a handsome devil!"
+						/>
+					</div>
+					<div class="about-text">
+						<p>
+							Hey, nice to meet you. My name is Sebastian and I am
+							a fullstack webdeveloper & designer based in Munich,
+							Germany. I have been teaching myself how to code
+							since 2017.
+						</p>
+						<p>
+							I love to design minimal and monochromatic websites
+							that run on ultraperfomant custom code free of the
+							constraints of frameworks & libraries. I also love
+							creating solutions for just about every problem you
+							can think of.
+						</p>
+						<p>
+							Here are some of the technologies I have worked with
+							and experience in:
+						</p>
+						<p class="about-techstack">
+							HTML5 // CSS3 // JavaScript(Es6+) // Node.js //
+							Express.js // Svelte // Heroku // Serverless
+							Functions
+						</p>
+					</div>
+				</div>
+				<div class="about-quote">
+					<p>
+						Perfection is achieved, not when there is nothing more
+						to add, but when there is nothing left to take away.
+					</p>
+					<span class="about-quote-sign"
+						>Antoine de Saint-Exupéry</span
+					>
+				</div>
+			</section>
+			<section id="portfolio">
+				<h3>Some of my creations:</h3>
+				<div class="portfolio-slider">
+					<div class="portfolio-card">
+						<a
+							class="portfolio-link"
+							rel="norefferer noopener"
+							target="_blank"
+							href="https://sabrinawanninger.de"
+						>
+							<img
+								src="./assets/image/thumbnail_photography.jpg"
+								alt="thumbnail for a photography website"
+								loading="lazy"
+						/></a>
+						<div class="portfolio-details">
+							<div>
+								<h4>Sabi Photography</h4>
+								<span class="portfolio-tech"
+									>JS, Custom designed CMS, API</span
+								>
+							</div>
+							<p class="portfolio-description">
+								A photography site that puts the talent of the
+								artist in the foreground. The design is sleek
+								and minimal to avoid distractions from the UI. A
+								custom build CMS solution that feeds the
+								frontend via an API completes the project.
+							</p>
+							<div>
+								<a
+									href="https://sabrinawanninger.de"
+									target="_blank"
+									rel="norefferer noopener"
+									><i pangolicons="convertToLink"></i
+								></a>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio-card">
+						<a
+							class="portfolio-link"
+							rel="norefferer noopener"
+							target="_blank"
+							href="https://pangolicons.herokuapp.com"
+						>
+							<img
+								src="./assets/image/thumbnail_pangolicons.jpg"
+								alt="thumbnail for a icon library"
+								loading="lazy"
+						/></a>
+						<div class="portfolio-details">
+							<div>
+								<h4>Pangolicons</h4>
+								<span class="portfolio-tech"
+									>JS, Node.js, NPM</span
+								>
+							</div>
+							<p class="portfolio-description">
+								A modern & minimal SVG icon library with a
+								simple api. All icons are fully customizable.
+								The backend is powered by a custom build
+								compiler, that generates the library out of
+								available svgs, complete with tags.
+							</p>
+							<div>
+								<a
+									href="https://www.npmjs.com/package/pangolicons"
+									target="_blank"
+									rel="norefferer noopener"
+									><i pangolicons="convertToLink"></i
+								></a>
+								<a
+									href="https://github.com/IamSebastianDev/pangolicons"
+									target="_blank"
+									rel="norefferer noopener"
+									><i pangolicons="github"></i
+								></a>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio-card">
+						<a
+							class="portfolio-link"
+							rel="norefferer noopener"
+							target="_blank"
+							href="https://simplipsum.now.sh"
+						>
+							<img
+								src="./assets/image/thumbnail_simplipsum.jpg"
+								alt="thumbnail for a lorem ipsum generator"
+								loading="lazy"
+						/></a>
+						<div class="portfolio-details">
+							<div>
+								<h4>simpLipsum</h4>
+								<span class="portfolio-tech"
+									>JS, Node.js, API</span
+								>
+							</div>
+							<p class="portfolio-description">
+								simpLipsum is a simple "Lorem Ipsum" generator,
+								that exposes a free restful API to the internet.
+								It can be used to generate placeholder text on
+								demand. The look of the website was heavily
+								influenced by a typesetting theme, visible in
+								the font and muted colors.
+							</p>
+							<div>
+								<a
+									href="https://simplipsum.now.sh"
+									target="_blank"
+									rel="norefferer noopener"
+									><i pangolicons="convertToLink"></i
+								></a>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio-card">
+						<a
+							class="portfolio-link"
+							rel="norefferer noopener"
+							target="_blank"
+							href="https://flatshadow.now.sh"
+						>
+							<img
+								src="./assets/image/thumbnail_flatshadow.jpg"
+								alt="thumbnail for a flatshadow library"
+								loading="lazy"
+						/></a>
+						<div class="portfolio-details">
+							<div>
+								<h4>FlatShadow.js</h4>
+								<span class="portfolio-tech">JS</span>
+							</div>
+							<p class="portfolio-description">
+								FlatShadow.js is a minimal JS library that can
+								be used to create stylistic shadows on webpages.
+								The library features a simple attribute based
+								API that can be easily configured. FlatShadow.js
+								is dependency free and available under a MIT
+								license.
+							</p>
+							<div>
+								<a
+									href="https://flatshadow.now.sh"
+									target="_blank"
+									rel="norefferer noopener"
+									><i pangolicons="convertToLink"></i
+								></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<span>&copy; 2021 Sebastian Heinz</span>
+			<a href="./privacy.html">Privacy Policy</a>
+		</footer>
+		<script type="module" src="./scripts/app.mjs"></script>
+	</body>
+</html>
