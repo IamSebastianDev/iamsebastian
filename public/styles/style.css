@@ -562,6 +562,7 @@ h1 .tagline-component:nth-child(4) {
 		sans-serif;
 	font-weight: 200;
 	letter-spacing: 2px;
+	line-height: 1.6em;
 
 	color: var(--color-ui-light);
 
@@ -674,6 +675,7 @@ h1 .tagline-component:nth-child(4) {
 	font-size: 0.8em;
 	font-family: 'Courier New', Courier, monospace;
 	letter-spacing: 2px;
+	line-height: 2em;
 
 	z-index: 100;
 }
