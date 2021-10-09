@@ -1,5 +1,39 @@
 /** @format */
 
+// i18n
+
+// import the provider & dicts
+
+import { Vay } from './vay.min.js';
+import en from './dicts/en.dict.mjs';
+import de from './dicts/de.dict.mjs';
+
+// create the provider
+
+const i18n = new Vay({ dictionaries: { en, de } });
+i18n.render();
+
+// controls
+const langSelector = {
+	de: document.querySelector("[language='de']"),
+	en: document.querySelector("[language='en']"),
+};
+
+window.addEventListener('DOMContentLoaded', (ev) => {
+	// current language;
+	const current = i18n.currentLanguage;
+	// set the language button active to equal to the language
+	langSelector[current].classList.add('i18n-selector-active');
+});
+
+langSelector.de.addEventListener('click', (ev) => {
+	i18n.currentLanguage = ev.target.getAttribute('language');
+});
+
+langSelector.en.addEventListener('click', (ev) => {
+	i18n.currentLanguage = ev.target.getAttribute('language');
+});
+
 // import the custom PortfolioCard component
 
 import { PortfolioCard } from './components/PortfolioCard.component.mjs';
@@ -13,11 +47,7 @@ const portfolioPieces = [
 		tech: 'JS, Node.js, NPM',
 		image: './assets/image/thumbnail_pangolicons.jpg',
 		alt: 'thumbnail for a icon library website',
-		description: `A modern & minimal SVG icon library with a
-		simple api. All icons are fully customizable.
-		The backend is powered by a custom build
-		compiler, that generates the library out of
-		available svgs, complete with tags.`,
+		description: i18n.translate('portfolio.pangolicons'),
 		links: {
 			website: {
 				href: 'https://pangolicons.herokuapp.com',
@@ -38,7 +68,7 @@ const portfolioPieces = [
 		tech: 'JS, Node.js, Puppeteer, API',
 		image: './assets/image/thumbnail_krankenhausampel.jpg',
 		alt: 'thumbnail for a healthcare website',
-		description: `A website in a neumorphism design that provides a dashboard for the metrics of the bavarian healthsystem in relation to the Covid-19 pandemic. The website uses a custom-built, opensource API.`,
+		description: i18n.translate('portfolio.krankenhausampel'),
 		links: {
 			website: {
 				href: 'https://krankenhausampelbayern.de',
@@ -55,7 +85,7 @@ const portfolioPieces = [
 		tech: 'JS, Node.js',
 		image: './assets/image/thumbnail_default.jpg',
 		alt: 'thumbnail depicting the github octocat.',
-		description: `Vay.js is a lightweight & dependency free, framework agnostic i18n provider built with modern Javascript. It features a fullfledged API for static and dynamic content, plurals and more. Vay.js is also what powers this websites i18n.`,
+		description: i18n.translate('portfolio.vay'),
 		links: {
 			github: {
 				href: 'https://github.com/IamSebastianDev/vay.js',
@@ -68,11 +98,7 @@ const portfolioPieces = [
 		tech: 'JS, Custom designed CMS, API',
 		image: './assets/image/thumbnail_photography.jpg',
 		alt: 'thumbnail for a photography website',
-		description: `A photography site that puts the talent of the
-		artist in the foreground. The design is sleek
-		and minimal to avoid distractions from the UI. A
-		custom build CMS solution that feeds the
-		frontend via an API completes the project.`,
+		description: i18n.translate('portfolio.photography'),
 		links: {
 			website: {
 				href: 'https://sabrinawanninger.de',
@@ -85,7 +111,7 @@ const portfolioPieces = [
 		tech: 'JS, Node.js, API',
 		image: './assets/image/thumbnail_simplipsum.jpg',
 		alt: 'thumbnail for a typography page',
-		description: `simpLipsum is a simple "Lorem Ipsum" generator, that exposes a free restful API to the internet. It can be used to generate placeholder text on demand. The look of the website was heavily influenced by a typesetting theme, visible in the font and muted colors.`,
+		description: i18n.translate('portfolio.simplipsum'),
 		links: {
 			website: {
 				href: 'https://simplipsum.vercel.app',
@@ -102,7 +128,7 @@ const portfolioPieces = [
 		tech: 'JS',
 		image: './assets/image/thumbnail_flatshadow.jpg',
 		alt: 'thumbnail for a javascript library with beatiful shadows.',
-		description: `FlatShadow.js is a minimal JS library that can be used to create stylistic shadows on webpages. The library features a simple attribute based API that can be easily configured. FlatShadow.js is dependency free and available under a MIT license.`,
+		description: i18n.translate('portfolio.flatshadow'),
 		links: {
 			website: {
 				href: 'https://flatshadow.vercel.app',
@@ -118,15 +144,39 @@ const portfolioPieces = [
 
 // Create the PortfolioCards
 
-const slider = document.querySelector('.portfolio-slider');
-portfolioPieces
-	.slice(0, 3)
-	.forEach((piece) => new PortfolioCard(piece).render(slider));
+const renderPortfolio = () => {
+	const slider = document.querySelector('.portfolio-slider');
 
-const grid = document.querySelector('.portfolio-grid');
-portfolioPieces
-	.slice(3)
-	.forEach((piece) => new PortfolioGrid(piece).render(grid));
+	[...slider.childNodes].forEach((node) => node.remove());
+
+	portfolioPieces
+		.slice(0, 3)
+		.forEach((piece) => new PortfolioCard(piece).render(slider));
+
+	const grid = document.querySelector('.portfolio-grid');
+
+	[...grid.childNodes].forEach((node) => node.remove());
+
+	portfolioPieces
+		.slice(3)
+		.forEach((piece) => new PortfolioGrid(piece).render(grid));
+};
+
+renderPortfolio();
+
+window.addEventListener('languageHasChanged', (ev) => {
+	i18n.render();
+	renderPortfolio();
+
+	// current language;
+	const current = i18n.currentLanguage;
+
+	let notCurrent = current == 'de' ? 'en' : 'de';
+
+	// set the language button active to equal to the language
+	langSelector[current].classList.add('i18n-selector-active');
+	langSelector[notCurrent].classList.remove('i18n-selector-active');
+});
 
 // Cookie controls
 

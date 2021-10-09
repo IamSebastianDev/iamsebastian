@@ -20,7 +20,7 @@
 	</head>
 	<body>
 		<div class="cookie" cookie-visible="false">
-			<p>
+			<p vay="cookie.description" vay-html>
 				Hey! This site uses Javascript, the
 				<a
 					href="https://en.wikipedia.org/wiki/Web_storage"
@@ -31,17 +31,27 @@
 				that in the
 				<a href="./privacy.html">Privacy Policy</a>.
 			</p>
-			<button id="cookie-confirm">Got it!</button>
+			<button vay="cookie.confirm" id="cookie-confirm">Got it!</button>
 		</div>
 		<nav>
+			<div class="i18n-select">
+				<button class="i18n-selector" language="de">DE</button>
+				<span>|</span>
+				<button class="i18n-selector" language="en">EN</button>
+			</div>
 			<ul>
 				<li class="nav-item">
-					<a href="#contact" class="nav-link nav-link-action"
+					<a
+						href="#contact"
+						class="nav-link nav-link-action"
+						vay="nav.contact"
 						>Get in touch.</a
 					>
 				</li>
 				<li class="nav-item">
-					<a href="#about" class="nav-link">About Me</a>
+					<a href="#about" class="nav-link" vay="nav.about"
+						>About Me</a
+					>
 				</li>
 				<li class="nav-item">
 					<a href="#portfolio" class="nav-link">Portfolio</a>
@@ -76,55 +86,66 @@
 			<section id="tagline">
 				<h1>
 					<span class="tagline-component">Hi!</span>
-					<span class="tagline-component">I</span>
-					<span class="tagline-component">am</span>
+					<span class="tagline-component" vay="tagline.one">I</span>
+					<span class="tagline-component" vay="tagline.two">am</span>
 					<span class="tagline-component">Sebastian</span>
 				</h1>
 				<h3>
-					<span class="tagline-component tagline-subheading"
+					<span
+						class="tagline-component tagline-subheading"
+						vay="tagline.three"
 						>A freelance Webdeveloper from Munich.</span
 					>
 				</h3>
 				<div class="scroll-hint">
-					<span>Scroll down to find out more</span>
+					<span vay="tagline.scroll"
+						>Scroll down to find out more</span
+					>
 					<i pangolicons="chevronDown"></i>
 				</div>
 			</section>
 			<section id="contact">
-				<h3 id="contact-header">Get in touch!</h3>
+				<h3 id="contact-header" vay="contact.heading">Get in touch!</h3>
 				<form class="contact-form" id="mailer">
 					<div class="form-group">
-						<label for="email">Your Emailadress:</label>
+						<label for="email" vay="contact.email"
+							>Your Emailadress:</label
+						>
 						<input
 							type="email"
 							name="email"
 							id="email"
-							placeholder="Your Emailadress"
+							vay
+							vay-placeholder="contact.email"
 						/>
 						<span class="contact-validation" state="false"></span>
 					</div>
 					<div class="form-group">
-						<label for="message">Your Message:</label>
+						<label for="message" vay="contact.message"
+							>Your Message:</label
+						>
 						<textarea
 							name="message"
 							id="message"
+							vay
+							vay-placeholder="contact.message"
 							placeholder="Your Message"
 						></textarea>
 						<span class="contact-validation" state="false"></span>
 					</div>
-					<button id="contact-submit">
+					<button id="contact-submit" vay="contact.submit">
 						Submit
 						<span id="contact-submit-spinner" state="false"></span>
 					</button>
 				</form>
-				<p>
+				<p vay="contact.descriptor" vay-html>
 					If you're not quite sure what I can do for you, take a look
 					at some of my
 					<a href="#portfolio">previous work</a> below.
 				</p>
 			</section>
 			<section id="about">
-				<h3>About me:</h3>
+				<h3 vay="about.heading">About me:</h3>
 				<div class="about-container">
 					<div class="about-image">
 						<img
@@ -132,7 +153,7 @@
 							alt="That's me, a handsome devil!"
 						/>
 					</div>
-					<div class="about-text">
+					<div class="about-text" vay="about.text" vay-html>
 						<p>
 							Hey, nice to meet you. My name is Sebastian and I am
 							a fullstack webdeveloper & designer based in Munich,
@@ -166,7 +187,7 @@
 				</div>
 			</section>
 			<section id="portfolio">
-				<h3>Some of my creations:</h3>
+				<h3 vay="portfolio.heading">Some of my creations:</h3>
 				<div class="portfolio-slider"></div>
 				<h4 class="portfolio-grid-heading">
 					And some more, smaller projects:

@@ -90,6 +90,42 @@ nav {
 	background: var(--color-ui-light);
 }
 
+/** @i18n */
+
+.i18n-select {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+	margin: 0 auto 0 5em;
+	font-size: 1.8em;
+}
+
+.i18n-selector,
+.i18n-select span {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	line-height: 2em;
+	height: 2em;
+
+	font-size: 1em;
+	padding: 0em 0.2em;
+	color: var(--color-ui-dark-shaded);
+}
+
+.i18n-selector {
+	cursor: pointer;
+}
+
+.i18n-selector-active,
+.i18n-selector:hover {
+	color: var(--color-ui-dark);
+}
+
 nav ul {
 	display: flex;
 
@@ -808,6 +844,16 @@ footer a:hover {
 
 	.portfolio-slider {
 		font-size: 0.8em;
+	}
+
+	.i18n-select,
+	nav ul {
+		margin: 0 0 0 0;
+	}
+
+	.i18n-select {
+		margin-right: auto;
+		padding: 0 1em;
 	}
 }
 
