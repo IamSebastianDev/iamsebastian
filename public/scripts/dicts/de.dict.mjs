@@ -32,7 +32,7 @@ export default {
 		Hey, schön dich kennen zu lernen! Ich bin Sebastian, ein freischaffender Fullstack Web-developer aus München. Ich code seit 2017.
 	</p>
 	<p>
-		Meine leidenschaft ist das designen von monochromatischen, minimalistischen Webseiten die modernen Code & Frameworks benutzen um die beste Perfomance möglich zu erhalten. Außerdem liebe ich es Lösungen für jede Art von Problem zu finden.
+		Meine Leidenschaft ist das designen von monochromatischen, minimalistischen Webseiten, die modernen Code & Frameworks benutzen um die bestmögliche Perfomance zu erhalten. Außerdem liebe ich es Lösungen für jede Art von Problemen zu finden.
 	</p>
 	<p>
 		Hier sind einige der Technologien mit denen ich in letzter Zeit gearbeitet habe:
@@ -44,11 +44,11 @@ export default {
 	},
 	portfolio: {
 		heading: 'Einige meiner Werke:',
-		pangolicons: `Eine moderne & minimale SVG-Icon Library mit einer einfachen API. Alle Icons sind vollständig personalisierbar. Das backend benutzt einen custom-built Compiler um die Library aus den verfügbaren SVGs inklusive deren Tags zu generieren.`,
-		krankenhausampel: `Die Krankenhausampel gibt einen überblick über die Auslastung des Gesundheitssystems in Bayern. Die Webseite, die in einem neumorphem Design gehalten ist, benutzt eine eigene RESTApi, die die Daten mittels crawling generiert.`,
-		vay: `Vay.js ist ein minimaler & moderner, framework unabhäniger i18n provider. Vay's API umfasst statischen und dynamischen Inhalt, sowie möglichkeiten für Pluralisierungen und mehr. Dieses Portfolio benutzt Vay.js`,
-		photography: `Ein Fotografieportfolio das die Bilder des Fotografen in den Vordergrund stellt. Die Webseite ist einem minmalen und leichten Design gehalten um ablenkungen durch die UI zu vermeiden. Das Backend ist ein minimales, custom CMS. `,
-		simplipsum: `SimpLipsum ist ein einfacher "Lorem Ipsum" generator, der mithilfe einer simplen RESTApi angesprochen werden kann. Das Aussehen der Webseite ist einem Schreibmaschinenlook nachempfunden, erkenntlich an der Schriftart und dem stimmigen Farbkonzept.`,
-		flatshadow: `FlatShadow.js ist eine JS-Library, die benutzt werden kann um stylistische Schatten auf Webseiten zu erzeugen. Die library hat eine simple, attribute basierende API die einfach konfiguriert werden kann.`,
+		pangolicons: `Eine moderne & minimale SVG-Icon Library mit einer einfachen API. Alle Icons sind vollständig personalisierbar. Das Backend benutzt einen custom-built Compiler um die Library aus den verfügbaren SVGs inklusive deren Tags zu generieren.`,
+		krankenhausampel: `Die Krankenhausampel gibt einen Überblick über die Auslastung des Gesundheitssystems in Bayern. Die Webseite, die in einem neumorphem Design gehalten ist, benutzt eine eigene RESTApi, die die Daten mittels crawling generiert.`,
+		vay: `Vay.js ist ein minimaler & moderner, framework-unabhängiger i18n provider. Vay's API umfasst statischen und dynamischen Inhalt, sowie Möglichkeiten für Pluralisierungen und mehr. Dieses Portfolio benutzt Vay.js`,
+		photography: `Ein Fotografieportfolio, das die Bilder des Fotografen in den Vordergrund stellt. Die Webseite ist in einem minimalen und leichten Design gehalten, um Ablenkungen durch die UI zu vermeiden. Das Backend ist ein minimales, custom CMS. `,
+		simplipsum: `SimpLipsum ist ein einfacher "Lorem Ipsum" Generator, der mithilfe einer simplen RESTApi angesprochen werden kann. Das Aussehen der Webseite ist einem Schreibmaschinenlook nachempfunden, erkenntlich an der Schriftart und dem stimmigen Farbkonzept.`,
+		flatshadow: `FlatShadow.js ist eine JS-Library, die benutzt werden kann, um stylistische Schatten auf Webseiten zu erzeugen. Die Library hat eine simple, attributbasierende API, die einfach konfiguriert werden kann.`,
 	},
 };

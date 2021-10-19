@@ -40,13 +40,13 @@ export default {
 	</p>
 	<p>
 		I love to design minimal and monochromatic websites
-		that uses modern code & frameworks to get the best
+		that use modern code & frameworks to get the best
 		perfomance possible. I also love creating solutions
 		for just about every problem you can think of.
 	</p>
 	<p>
-		Here are some of the technologies I have worked with
-		and experience in:
+		Here are some of the technologies I have worked 
+		and experienced with:
 	</p>
 	<p class="about-techstack">
 		HTML5 // CSS3 // JavaScript(Es6+) // Node.js //
