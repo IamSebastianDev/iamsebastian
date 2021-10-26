@@ -23,7 +23,7 @@ export default {
 		heading: 'Schreib mir!',
 		email: 'Deine Emailadresse',
 		message: 'Deine Nachricht',
-		submit: 'Abschicken!',
+		submit: 'Abschicken! <span id="contact-submit-spinner" state="false"></span>',
 		descriptor: `Wenn du dir nicht ganz sicher bist, ob wir zueinander passen, schau dir meine <a href="#portfolio">bisherige Arbeit</a> an.`,
 	},
 	about: {

@@ -27,7 +27,7 @@ export default {
 		heading: 'Get in touch!',
 		email: 'Your Emailadress',
 		message: 'Your Message',
-		submit: 'Submit',
+		submit: 'Submit <span id="contact-submit-spinner" state="false"></span>',
 		descriptor: `If you're not quite sure what I can do for you, take a look at some of my <a href="#portfolio">previous work</a> below.`,
 	},
 	about: {
