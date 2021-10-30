@@ -99,7 +99,10 @@ nav {
 	align-items: center;
 
 	margin: 0 auto 0 5em;
+	padding: 0.4em 0;
 	font-size: 1.8em;
+
+	background: var(--color-ui-light);
 }
 
 .i18n-selector,
@@ -864,7 +867,7 @@ footer a:hover {
 
 	.i18n-select {
 		margin-right: auto;
-		padding: 0 1em;
+		padding: 0.4em 1em;
 	}
 }
 
@@ -886,7 +889,8 @@ footer a:hover {
 		padding: 10vh;
 
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
+		flex-wrap: wrap;
 		justify-content: center;
 		align-items: space-evenly;
 
