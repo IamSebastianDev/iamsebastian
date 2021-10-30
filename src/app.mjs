@@ -16,8 +16,6 @@ import de from './dicts/de.dict.mjs';
 
 const i18n = new Vay({ dictionaries: { en, de } });
 
-export { i18n };
-
 // call the inital render for all static elements on the website
 
 i18n.render();
@@ -118,6 +116,9 @@ const ContactForm = {
 	loader: document.querySelector('#contact-submit-spinner'),
 
 	assureNoTimeOut() {
+		// create a timeout flag
+
+		this.timeoutFlag = true;
 		this.timeOut = window.setTimeout(() => {
 			this.reportTimeout();
 		}, 10000);
@@ -126,6 +127,10 @@ const ContactForm = {
 		window.clearTimeout(this.timeOut);
 	},
 	reportTimeout() {
+		if (!this.timeoutFlag) {
+			return;
+		}
+
 		// set the loader to inactive
 		this.loader.setAttribute('state', false);
 		this.formElement.nextElementSibling.innerHTML =
@@ -230,6 +235,9 @@ const ContactForm = {
 		// decode the JSON response from the server
 
 		const result = await response.json();
+		if (result != undefined) {
+			this.timeoutFlag = false;
+		}
 
 		// reset the server timeout and the loader
 
