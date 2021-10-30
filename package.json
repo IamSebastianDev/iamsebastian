@@ -5,7 +5,7 @@
   "main": "server.mjs",
   "scripts": {
     "start": "node server.mjs",
-    "dev": "nodemon server.mjs"
+    "dev": "rollup --config rollup.config.js --watch"
   },
   "author": "Sebastian Heinz",
   "license": "MIT",
@@ -15,6 +15,7 @@
     "nodemailer": "^6.6.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "rollup": "^2.58.3",
+    "rollup-plugin-terser": "^7.0.2"
   }
 }

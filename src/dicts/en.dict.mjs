@@ -70,5 +70,16 @@ export default {
 		frontend via an API completes the project.`,
 		simplipsum: `simpLipsum is a simple "Lorem Ipsum" generator, that exposes a free restful API to the internet. It can be used to generate placeholder text on demand. The look of the website was heavily influenced by a typesetting theme, visible in the font and muted colors.`,
 		flatshadow: `FlatShadow.js is a minimal JS library that can be used to create stylistic shadows on webpages. The library features a simple attribute based API that can be easily configured. FlatShadow.js is dependency free and available under a MIT license.`,
+		watcherbot: `WatcherBot is a small node.js library that can be used to monitor changes or actions on a website within a set interval. It also features a "interessting" API.`,
+	},
+	form: {
+		success: 'Success!',
+		failure: `Uhoh! Something went wrong. You can try again or mail to: <a href='mailto:sebastian@iamsebastian.dev'>sebastian@iamsebastian.dev</a>. Sorry about that!`,
+		thanks: `Hey, thanks for getting in touch! I'll get back to you as soon as possible!`,
+		timeout: `Oh boy, something is not quite right with the Server, it timed out. You can try again or mail to: <a href='mailto:sebastian@iamsebastian.dev'>sebastian@iamsebastian.dev</a>. Sorry about that! `,
+		validation: {
+			emailIncorrect: `Please enter a valid email.`,
+			messageToShort: `Please send a longer text.`,
+		},
 	},
 };

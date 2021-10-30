@@ -852,6 +852,11 @@ footer a:hover {
 		font-size: 0.8em;
 	}
 
+	.portfolio-description {
+		font-weight: 400;
+		letter-spacing: 0.2em;
+	}
+
 	.i18n-select,
 	nav ul {
 		margin: 0 0 0 0;

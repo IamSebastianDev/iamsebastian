@@ -50,5 +50,16 @@ export default {
 		photography: `Ein Fotografieportfolio, das die Bilder des Fotografen in den Vordergrund stellt. Die Webseite ist in einem minimalen und leichten Design gehalten, um Ablenkungen durch die UI zu vermeiden. Das Backend ist ein minimales, custom CMS. `,
 		simplipsum: `SimpLipsum ist ein einfacher "Lorem Ipsum" Generator, der mithilfe einer simplen RESTApi angesprochen werden kann. Das Aussehen der Webseite ist einem Schreibmaschinenlook nachempfunden, erkenntlich an der Schriftart und dem stimmigen Farbkonzept.`,
 		flatshadow: `FlatShadow.js ist eine JS-Library, die benutzt werden kann, um stylistische Schatten auf Webseiten zu erzeugen. Die Library hat eine simple, attributbasierende API, die einfach konfiguriert werden kann.`,
+		watcherbot: `WatcherBot ist eine Node.js-Library, die dazu benutzt werden kann, eine beliebige Webseite regelmäßig aufzurufen und auf ändernung zu Überprüfen. Eine "Interesante" API rundet die Library ab.`,
+	},
+	form: {
+		success: 'Erfolg!',
+		failure: `Uhoh! Irgendwas hat nicht geklappt. Du kannst mir deine Nachricht auch direkt an: <a href='mailto:sebastian@iamsebastian.dev'>sebastian@iamsebastian.dev</a> schicken.`,
+		thanks: `Hey, danke für deine Nachricht. Ich melde mich schnellstmöglichst zurück!`,
+		timeout: `Uhoh! Der Server hat zulange für die Antwort gebraucht. Du kannst mir deine Nachricht auch direkt an: <a href='mailto:sebastian@iamsebastian.dev'>sebastian@iamsebastian.dev</a> schicken. `,
+		validation: {
+			emailIncorrect: `Bitte gib eine vollständige Emailadresse ein.`,
+			messageToShort: `Deine Nachricht sollte länger als 10 zeichen sein.`,
+		},
 	},
 };

@@ -16,7 +16,10 @@
 			rel="stylesheet"
 		/>
 
-		<script src="./scripts/pangolicons.latest.min.mjs"></script>
+		<script
+			type="module"
+			src="./scripts/pangolicons.latest.min.mjs"
+		></script>
 	</head>
 	<body>
 		<div class="cookie" cookie-visible="false">
@@ -79,7 +82,7 @@
 				</li>
 			</ul>
 			<button class="nav-burger">
-				<i pangolicons="alignJustifiy"></i>
+				<i pangolicons="burger"></i>
 			</button>
 		</nav>
 		<main>
@@ -199,6 +202,90 @@
 			<span>&copy; 2021 Sebastian Heinz</span>
 			<a href="./privacy.html">Privacy Policy</a>
 		</footer>
-		<script type="module" src="./scripts/app.mjs"></script>
+		<script type="module" src="./scripts/bundle.min.mjs"></script>
+		<script>
+			/**
+			 * Inline script to handle the privacy banner. While this page does not track
+			 * personal data or store any kind of cookies, it does use the local storage.
+			 * Mostly for this privacy banner, but still.
+			 */
+
+			const CookieBanner = document.querySelector('.cookie');
+			const CookieConfirm = document.querySelector('#cookie-confirm');
+
+			// on window load, check if the cookie modal should be shown depeding on if the cookieSeen flag in local Storage has been set
+
+			window.addEventListener('load', (ev) => {
+				// Check the cookie state saved in local storage
+				const CookieSeen = localStorage.getItem('cookieSeen');
+
+				!CookieSeen &&
+					CookieBanner.setAttribute('cookie-visible', true);
+			});
+
+			// create the Ev Listener on the confirm Button
+
+			CookieConfirm.addEventListener('click', (ev) => {
+				// set the localStorage flag
+
+				localStorage.setItem('cookieSeen', true);
+
+				// disappear the cookie modal
+				CookieBanner.setAttribute('cookie-visible', false);
+			});
+		</script>
+		<script>
+			// handle the scroll hint disaperenace
+
+			window.addEventListener('scroll', (ev) => {
+				if (window.pageYOffset > window.innerHeight / 2) {
+					const Scrollhint = document.querySelector('.scroll-hint');
+
+					Scrollhint.style.opacity = '0';
+
+					window.setTimeout(() => {
+						Scrollhint.style.display = 'none';
+					}, 1000);
+				}
+			});
+		</script>
+		<script>
+			/**
+			 *
+			 * This inline script handles the navigation on mobile sized devices, by creating the interactive
+			 * burger button and the associated actions.
+			 *
+			 */
+
+			const replaceIcon = (iconName) => {
+				Switch.firstElementChild.replaceWith(
+					Pangolicons.icons[iconName].toSvg()
+				);
+			};
+
+			const Switch = document.querySelector('.nav-burger');
+			const Menu = document.querySelector('nav ul');
+
+			Switch.addEventListener('click', (ev) => {
+				// get the state of the menu
+				let state = Menu.getAttribute('state');
+
+				if (state == 'closed' || state == undefined) {
+					Menu.setAttribute('state', 'open');
+					document.body.style.overflowY = 'hidden';
+					replaceIcon('x');
+				} else if (state == 'open') {
+					Menu.setAttribute('state', 'closed');
+					document.body.style.overflowY = '';
+					replaceIcon('burger');
+				}
+			});
+
+			window.addEventListener('hashchange', (ev) => {
+				Menu.setAttribute('state', closed);
+				document.body.style.overflowY = '';
+				replaceIcon('burger');
+			});
+		</script>
 	</body>
 </html>
