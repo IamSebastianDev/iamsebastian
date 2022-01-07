@@ -51,6 +51,7 @@ export default {
 		simplipsum: `SimpLipsum ist ein einfacher "Lorem Ipsum" Generator, der mithilfe einer simplen RESTApi angesprochen werden kann. Das Aussehen der Webseite ist einem Schreibmaschinenlook nachempfunden, erkenntlich an der Schriftart und dem stimmigen Farbkonzept.`,
 		flatshadow: `FlatShadow.js ist eine JS-Library, die benutzt werden kann, um stylistische Schatten auf Webseiten zu erzeugen. Die Library hat eine simple, attributbasierende API, die einfach konfiguriert werden kann.`,
 		watcherbot: `WatcherBot ist eine Node.js-Library, die dazu benutzt werden kann, eine beliebige Webseite regelmäßig aufzurufen und auf ändernung zu Überprüfen. Eine "Interesante" API rundet die Library ab.`,
+		qarri: `Eine simple statische Webseite für ein lokales Unternehmen, gehalten in einem simplen, bruatlistischen Design.`,
 	},
 	form: {
 		success: 'Erfolg!',

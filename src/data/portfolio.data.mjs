@@ -4,7 +4,7 @@ export default (i18n) => {
 	return [
 		{
 			heading: 'Pangolicons',
-			tech: 'JS, Node.js, NPM',
+			tech: 'JS, SvelteKit, TailwindCSS, Node.js, NPM',
 			image: './assets/image/thumbnail_pangolicons.jpg',
 			alt: 'thumbnail for a icon library website',
 			description: i18n.translate('portfolio.pangolicons'),
@@ -50,6 +50,23 @@ export default (i18n) => {
 				github: {
 					href: 'https://github.com/IamSebastianDev/vay.js',
 					icon: Pangolicons.icons.github,
+				},
+			},
+		},
+		{
+			heading: 'Qarri Reinigungsservice',
+			tech: 'JS, Sveltekit, TailwindCSS',
+			image: './assets/image/thumbnail_qarri.jpeg',
+			alt: 'thumbnail depicting the Website',
+			description: i18n.translate('portfolio.qarri'),
+			links: {
+				github: {
+					href: 'https://github.com/IamSebastianDev/qarri-reinigungsservice.de',
+					icon: Pangolicons.icons.github,
+				},
+				website: {
+					href: 'https://qarri-reinigungsservice.de',
+					icon: Pangolicons.icons.convertToLink,
 				},
 			},
 		},

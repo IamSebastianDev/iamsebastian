@@ -79,8 +79,8 @@ const render = ({ target }) => {
 	[...grid.childNodes].forEach((node) => node.remove());
 
 	// extract the first three elements and render them as cards.
-	Data.slice(0, 3).forEach((card) => new PortfolioCard(card).render(slider));
-	Data.slice(3).forEach((card) => new PortfolioGrid(card).render(grid));
+	Data.slice(0, 4).forEach((card) => new PortfolioCard(card).render(slider));
+	Data.slice(4).forEach((card) => new PortfolioGrid(card).render(grid));
 };
 
 render({ target: document.querySelector('#portfolio') });
